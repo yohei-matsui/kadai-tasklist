@@ -2,10 +2,9 @@
 
 <ul>
     <% @tasks.each do |tasklist| %>
-        <li><% tasklist.content %></li>
-        <% end %>
+    <li><%= tasklist.content %> : <%= tasklist.status %></li>
+    <% end %>
 </ul>
 
-<%= paginate @tasks %>
 
 <%= link_to '新規タスクの投稿', new_task_path %>
